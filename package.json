@@ -1,0 +1,14 @@
+{
+  "name": "attrition",
+  "version": "0.0.0",
+  "description": "year over year class attrition",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sivan Mehta",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "puppeteer": "^16.2.0"
+  }
+}
