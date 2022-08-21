@@ -1,0 +1,6 @@
+- [x] scrape a single page
+- [ ] scrape a list of pages
+- [ ] gather data in a single dataframe
+- [ ] plot class size per year
+- [ ] plot average attritions per class
+- [ ] plot average attrition per year
