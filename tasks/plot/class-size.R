@@ -45,8 +45,7 @@ dat %>%
   aes(x = school.year, fill = as.factor(graduating.class)) + 
   geom_bar() +
   theme(
-    axis.text.x = element_text(angle=45),
-    legend.position="none"
+    axis.text.x = element_text(angle=45)
   ) +
   scale_x_continuous(
     name = 'Start of Year',
@@ -55,7 +54,10 @@ dat %>%
   scale_y_continuous(
     name='Number of Students'
   ) +
-  labs(title = 'Year-over-Year Class Attrition')
+  labs(
+    title = 'Year-over-Year Class Attrition',
+    fill='Graduating Class'
+  )
 
 ggsave('plots/class-attrition-by-year.png', width = 8, height = 4)
 
@@ -74,6 +76,7 @@ dat %>%
   scale_y_continuous(
     name='Number of Students'
   ) +
-  labs(title = 'Class proportion by year')
+  labs(title = 'Class Proportion by Year')
 
 ggsave('plots/class-proportion-by-year.png', width = 8, height = 4)
+
