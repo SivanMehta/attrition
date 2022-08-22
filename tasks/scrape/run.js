@@ -1,7 +1,7 @@
 const puppeteer = require('puppeteer');
-const scrape = require('./tasks/scrape');
-const parse = require('./tasks/parse');
-const format = require('./tasks/format');
+const scrape = require('./scrape');
+const parse = require('./parse');
+const format = require('./format');
 const writeFile = require('util').promisify(require('fs').writeFile);
 
 const start = 2011;

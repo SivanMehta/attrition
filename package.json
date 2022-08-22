@@ -2,9 +2,9 @@
   "name": "attrition",
   "version": "0.0.0",
   "description": "year over year class attrition",
-  "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "scrape": "node tasks/scrape/run.js",
+    "plot": "Rscript tasks/plot/all.R"
   },
   "author": "Sivan Mehta",
   "license": "UNLICENSED",
