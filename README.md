@@ -22,7 +22,6 @@ Data is from the Carnegie Mellon rosters on [SwimCloud].
 
 > Assumes you already have [npm] installed
 
-
 ```
 npm ci
 npm run scrape
@@ -32,18 +31,41 @@ This should fill up the `data/` directory with files
 
 ```bash
 $ tree data/
-data/
-├── 2011.csv
-├── 2012.csv
-├── 2013.csv
-├── 2014.csv
-├── 2015.csv
-├── 2016.csv
-├── 2017.csv
-├── 2018.csv
-├── 2019.csv
-├── 2020.csv
-└── 2021.csv
+data
+├── CMU
+│   ├── 2011.csv
+│   ├── 2012.csv
+│   ├── 2013.csv
+│   ├── 2014.csv
+│   ├── 2015.csv
+│   ├── 2016.csv
+│   ├── 2017.csv
+│   ├── 2018.csv
+│   ├── 2019.csv
+│   ├── 2020.csv
+│   ├── 2021.csv
+├── Emory
+│   ├── <same as above>
+├── Chicago
+│   ├── <same as above>
+├── WashU
+│   ├── <same as above>
+├── NYU
+│   ├── <same as above>
+├── Case
+│   ├── <same as above>
+├── Rochester
+│   ├── <same as above>
+├── Brandeis
+│   ├── <same as above>
+├── Hopkins
+│   ├── <same as above>
+├── MIT
+│   ├── <same as above>
+├── Kenyon
+│   ├── <same as above>
+├── Denison
+│   ├── <same as above>
 ```
 
 ## Plotting

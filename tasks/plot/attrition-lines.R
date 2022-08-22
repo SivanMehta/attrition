@@ -6,7 +6,7 @@ extract.total <- function(df) {
   return(df$total)
 }
 
-dat %>%
+dat.CMU %>%
   group_by(year, name) %>%
   summarise(total = count(year)) %>%
   extract.total() %>%

@@ -4,7 +4,7 @@ library('plyr')
 
 background.color = '#EBEBEB'
 
-dat %>%
+dat.CMU %>%
   ggplot() +
   aes(x = school.year, fill = year) +
   geom_bar(color = background.color) +
@@ -25,7 +25,7 @@ dat %>%
 
 ggsave('plots/relative-class-size-by-year.png', width = 8, height = 4)
 
-dat %>%
+dat.CMU %>%
   ggplot() +
   aes(x = school.year, fill = as.factor(graduating.class)) + 
   geom_bar(color = background.color) +
@@ -47,7 +47,7 @@ dat %>%
 
 ggsave('plots/class-attrition-by-year.png', width = 8, height = 4)
 
-dat %>%
+dat.CMU %>%
   filter(school.year > 2013) %>%
   ggplot() +
   aes(x = school.year, fill = year) + 
@@ -69,7 +69,7 @@ dat %>%
 
 ggsave('plots/relative-class-proportion-by-year.png', width = 8, height = 4)
 
-dat %>%
+dat.CMU %>%
   ggplot() +
   aes(x = school.year, fill = as.factor(graduating.class)) + 
   geom_bar(color = background.color, position = 'fill') +
