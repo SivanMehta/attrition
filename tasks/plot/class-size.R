@@ -5,7 +5,7 @@ library('plyr')
 dat <- tibble()
 
 # plot class size per year
-start <- 2014
+start <- 2011
 end <- 2021
 
 for (year in start:end) {
@@ -24,14 +24,13 @@ dat <- dat %>%
 
 dat %>%
   ggplot() +
-  aes(x = school.year, fill = year) + 
+  aes(x = school.year, fill = year) +
   geom_bar() +
   theme(
-    axis.text.x = element_text(angle=45),
-    legend.position="none"
+    axis.text.x = element_text(angle=45)
   ) +
   scale_x_continuous(
-    name = 'Year',
+    name = 'Start of Year',
     breaks = c(start:end)
   ) +
   scale_y_continuous(
@@ -50,7 +49,7 @@ dat %>%
     legend.position="none"
   ) +
   scale_x_continuous(
-    name = 'Year',
+    name = 'Start of Year',
     breaks = c(start:end)
   ) +
   scale_y_continuous(
@@ -59,3 +58,22 @@ dat %>%
   labs(title = 'Year-over-Year Class Attrition')
 
 ggsave('plots/class-attrition-by-year.png', width = 8, height = 4)
+
+dat %>%
+  filter(school.year > 2013) %>%
+  ggplot() +
+  aes(x = school.year, fill = year) + 
+  geom_bar(position='fill') +
+  theme(
+    axis.text.x = element_text(angle=45)
+  ) +
+  scale_x_continuous(
+    name = 'Start of Year',
+    breaks = c(start:end)
+  ) +
+  scale_y_continuous(
+    name='Number of Students'
+  ) +
+  labs(title = 'Class proportion by year')
+
+ggsave('plots/class-proportion-by-year.png', width = 8, height = 4)
