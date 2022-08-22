@@ -8,27 +8,27 @@ const start = 2011;
 const end = 2021;
 
 const competitors = {
-  // divison 3 competitors
-  CMU: 33,
-  Emory: 123, // 🖕🖕🖕
-  Chicago: 259,
-  WashU: 94,
-  NYU: 59,
-  Case: 200,
-  Rochester: 6,
-  Brandeis: 4,
-  Hopkins: 111,
-  MIT: 14,
-  Kenyon: 125,
-  Denison: 118,
-  Williams: 129
+  // divison 3
+  // CMU: 33,
+  // Emory: 123, // 🖕🖕🖕
+  // Chicago: 259,
+  // WashU: 94,
+  // NYU: 59,
+  // Case: 200,
+  // Rochester: 6,
+  // Brandeis: 4,
+  // Hopkins: 111,
+  // MIT: 14,
+  // Kenyon: 125,
+  // Denison: 118,
+  // Williams: 129,
 
-  // division 1 references
+  // division 1
   Florida: 117,
   Stanford: 112,
-  Harvard: 134
+  Harvard: 134,
   Michigan: 89,
-  Georgia: 124
+  Georgia: 124,
 };
 
 // generate a roster given a year and team id

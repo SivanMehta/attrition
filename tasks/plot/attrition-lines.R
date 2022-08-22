@@ -35,7 +35,12 @@ teams <- c(
   "Hopkins",
   "MIT",
   "Kenyon",
-  "Denison"
+  "Denison",
+  "Florida",
+  "Stanford",
+  "Harvard",
+  "Michigan",
+  "Georgia"
 )
 
 teams.dat <- tibble()
@@ -83,9 +88,10 @@ line.plot <- teams.dat %>%
   labs(
     title = "Attrition by School",
     subtitle="Every school is scaled against themselves",
-    colour = "School"
+    colour = "School",
+    y = "Proportion of Freshman class remaining"
   )
 
 direct.label.ggplot(line.plot, 'last.qp')
 
-ggsave('plots/attrition-by-team.png', width = 6, height = 6)
+ggsave('plots/attrition-by-team.png', width = 7, height = 10)
