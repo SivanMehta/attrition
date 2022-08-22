@@ -9,7 +9,7 @@ Exploring the data to be revealed in the rosters exposed on [SwimCloud].
 - [x] scrape a single page
 - [x] scrape a list of pages
 - [x] gather data in a single dataframe
-- [ ] plot class size per year
+- [x] plot class size per year
 - [ ] plot average attritions per class
 - [ ] plot average attrition per year
 
