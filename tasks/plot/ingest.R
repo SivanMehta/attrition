@@ -12,6 +12,7 @@ ingest <- function(school) {
     filename <- paste('data/', school, '/', year, '.csv', sep='')
     yearly.data <- read.csv(filename, sep='|')
     yearly.data$school.year = year
+    yearly.data$school = school
     dat <- rbind(dat, yearly.data)
   }
   

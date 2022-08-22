@@ -5,5 +5,9 @@ module.exports = function format(data) {
     content += `${row.name}|${row.hometown}|${row.class}|${row.points}\n`;
   });
 
+  if(data.length === 0) {
+    content += `-|-|-|-\n`;
+  }
+
   return content;
 }
