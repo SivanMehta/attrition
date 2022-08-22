@@ -8,6 +8,7 @@ const start = 2011;
 const end = 2021;
 
 const competitors = {
+  // divison 3 competitors
   CMU: 33,
   Emory: 123, // 🖕🖕🖕
   Chicago: 259,
@@ -19,7 +20,15 @@ const competitors = {
   Hopkins: 111,
   MIT: 14,
   Kenyon: 125,
-  Denison: 118
+  Denison: 118,
+  Williams: 129
+
+  // division 1 references
+  Florida: 117,
+  Stanford: 112,
+  Harvard: 134
+  Michigan: 89,
+  Georgia: 124
 };
 
 // generate a roster given a year and team id

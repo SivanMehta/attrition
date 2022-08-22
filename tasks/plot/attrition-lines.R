@@ -1,6 +1,7 @@
 library('ggplot2')
 library('dplyr')
 library('plyr')
+library('directlabels')
 
 extract.total <- function(df) {
   return(df$total)
@@ -68,7 +69,7 @@ teams.dat %>%
 
 ggsave('plots/all-time-class-count.png', width = 8, height = 4)
 
-teams.dat %>%
+line.plot <- teams.dat %>%
   mutate(class = revalue(x, c("FR" = 1, "SO" = 2, "JR" = 3, "SR" = 4))) %>%
   ggplot() +
     aes(x = class, y = proportion, group = school, colour = school) +
@@ -84,5 +85,7 @@ teams.dat %>%
     subtitle="Every school is scaled against themselves",
     colour = "School"
   )
+
+direct.label.ggplot(line.plot, 'last.qp')
 
 ggsave('plots/attrition-by-team.png', width = 6, height = 6)
