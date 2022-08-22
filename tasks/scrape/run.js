@@ -9,19 +9,19 @@ const end = 2021;
 
 const competitors = {
   // divison 3
-  // CMU: 33,
-  // Emory: 123, // 🖕🖕🖕
-  // Chicago: 259,
-  // WashU: 94,
-  // NYU: 59,
-  // Case: 200,
-  // Rochester: 6,
-  // Brandeis: 4,
-  // Hopkins: 111,
-  // MIT: 14,
-  // Kenyon: 125,
-  // Denison: 118,
-  // Williams: 129,
+  CMU: 33,
+  Emory: 123, // 🖕🖕🖕
+  Chicago: 259,
+  WashU: 94,
+  NYU: 59,
+  Case: 200,
+  Rochester: 6,
+  Brandeis: 4,
+  Hopkins: 111,
+  MIT: 14,
+  Kenyon: 125,
+  Denison: 118,
+  Williams: 129,
 
   // division 1
   Florida: 117,
@@ -29,6 +29,7 @@ const competitors = {
   Harvard: 134,
   Michigan: 89,
   Georgia: 124,
+  GeorgiaTech: 34
 };
 
 // generate a roster given a year and team id

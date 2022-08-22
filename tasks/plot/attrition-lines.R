@@ -40,7 +40,8 @@ teams <- c(
   "Stanford",
   "Harvard",
   "Michigan",
-  "Georgia"
+  "Georgia",
+  "GeorgiaTech"
 )
 
 teams.dat <- tibble()

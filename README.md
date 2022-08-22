@@ -7,7 +7,7 @@
 
 ## Appendix
 
-Data is from the Carnegie Mellon rosters on [SwimCloud].
+Data is from the team rosters on [SwimCloud].
 
 ### Todo list
 
@@ -26,7 +26,8 @@ npm ci
 npm run scrape
 ```
 
-This should fill up the `data/` directory with files
+This should fill up the `data/` directory with files. This is the file tree for
+just Carnegie Mellon, but the same file tree is reflective of every other school
 
 ```bash
 $ tree data/
@@ -43,28 +44,6 @@ data
 │   ├── 2019.csv
 │   ├── 2020.csv
 │   ├── 2021.csv
-├── Emory
-│   ├── <same as above>
-├── Chicago
-│   ├── <same as above>
-├── WashU
-│   ├── <same as above>
-├── NYU
-│   ├── <same as above>
-├── Case
-│   ├── <same as above>
-├── Rochester
-│   ├── <same as above>
-├── Brandeis
-│   ├── <same as above>
-├── Hopkins
-│   ├── <same as above>
-├── MIT
-│   ├── <same as above>
-├── Kenyon
-│   ├── <same as above>
-├── Denison
-│   ├── <same as above>
 ```
 
 ## Plotting
