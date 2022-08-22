@@ -1,6 +1,4 @@
 node_modules
-data/*.json
-data/*.txt
-data/*.csv
+data/**/*.csv
 .Rproj.user
 .DS_Store
