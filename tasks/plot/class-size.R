@@ -2,48 +2,12 @@ library('ggplot2')
 library('dplyr')
 library('plyr')
 
-dat <- tibble()
-
-# plot class size per year
-start <- 2011
-end <- 2021
-
-for (year in start:end) {
-  filename <- paste('data/', year, '.csv', sep='')
-  yearly.data <- read.csv(filename, sep='|')
-  yearly.data$school.year = year
-  dat <- rbind(dat, yearly.data)
-}
-
-# data cleaning
-dat <- dat %>%
-  filter(year != '–') %>%
-  mutate(graduating.class = NA) %>%
-  mutate(graduating.class = revalue(year, c("FR" = 4, "SO" = 3, "JR" = 2, "SR" = 1))) %>%
-  mutate(graduating.class = as.numeric(graduating.class) + school.year)
+background.color = '#EBEBEB'
 
 dat %>%
   ggplot() +
   aes(x = school.year, fill = year) +
-  geom_bar() +
-  theme(
-    axis.text.x = element_text(angle=45)
-  ) +
-  scale_x_continuous(
-    name = 'Start of Year',
-    breaks = c(start:end)
-  ) +
-  scale_y_continuous(
-    name='Number of Students'
-  ) +
-  labs(title = 'Class Size by Year')
-
-ggsave('plots/relative-class-size-by-year.png', width = 8, height = 4)
-
-dat %>%
-  ggplot() +
-  aes(x = school.year, fill = as.factor(graduating.class)) + 
-  geom_bar() +
+  geom_bar(color = background.color) +
   theme(
     axis.text.x = element_text(angle=45)
   ) +
@@ -55,17 +19,16 @@ dat %>%
     name='Number of Students'
   ) +
   labs(
-    title = 'Year-over-Year Class Attrition',
-    fill='Graduating Class'
+    title = 'Class Size by Year',
+    subtitle = "Coloring by class at the start of the year"
   )
 
-ggsave('plots/class-attrition-by-year.png', width = 8, height = 4)
+ggsave('plots/relative-class-size-by-year.png', width = 8, height = 4)
 
 dat %>%
-  filter(school.year > 2013) %>%
   ggplot() +
-  aes(x = school.year, fill = year) + 
-  geom_bar(position='fill') +
+  aes(x = school.year, fill = as.factor(graduating.class)) + 
+  geom_bar(color = background.color) +
   theme(
     axis.text.x = element_text(angle=45)
   ) +
@@ -76,7 +39,54 @@ dat %>%
   scale_y_continuous(
     name='Number of Students'
   ) +
-  labs(title = 'Class Proportion by Year')
+  labs(
+    title = 'Year-over-Year Class Size',
+    subtitle = "Coloring by graduating class. Freshman appear at the bottom of the graph",
+    fill='Graduating Class'
+  )
+
+ggsave('plots/class-attrition-by-year.png', width = 8, height = 4)
+
+dat %>%
+  filter(school.year > 2013) %>%
+  ggplot() +
+  aes(x = school.year, fill = year) + 
+  geom_bar(color = background.color, position='fill') +
+  theme(
+    axis.text.x = element_text(angle=45)
+  ) +
+  scale_x_continuous(
+    name = 'Start of Year',
+    breaks = c(start:end)
+  ) +
+  scale_y_continuous(
+    name='Proportion of students of Students',
+  ) +
+  labs(
+    title = 'Class Proportion by Year',
+    subtitle = "Coloring by class at the start of the year"
+  )
+
+ggsave('plots/relative-class-proportion-by-year.png', width = 8, height = 4)
+
+dat %>%
+  ggplot() +
+  aes(x = school.year, fill = as.factor(graduating.class)) + 
+  geom_bar(color = background.color, position = 'fill') +
+  theme(
+    axis.text.x = element_text(angle=45)
+  ) +
+  scale_x_continuous(
+    name = 'Start of Year',
+    breaks = c(start:end)
+  ) +
+  scale_y_continuous(
+    name='Number of Students'
+  ) +
+  labs(
+    title = 'Year-over-Year Class Size',
+    subtitle = "Coloring by graduating class. Freshman appear at the bottom of the graph",
+    fill='Graduating Class'
+  )
 
 ggsave('plots/class-proportion-by-year.png', width = 8, height = 4)
-

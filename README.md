@@ -1,8 +1,10 @@
 # Attrition
 
 ![](./plots/relative-class-size-by-year.png)
-![](./plots/class-proportion-by-year.png)
+![](./plots/relative-class-proportion-by-year.png)
 ![](./plots/class-attrition-by-year.png)
+![](./plots/class-proportion-by-year.png)
+![](./plots/all-time-class-count.png)
 
 ## Appendix
 
@@ -14,8 +16,7 @@ Data is from the Carnegie Mellon rosters on [SwimCloud].
 - [x] scrape a list of pages
 - [x] gather data in a single dataframe
 - [x] plot class size per year colored by class
-- [ ] plot attrition lines class
-- [ ] plot average attrition per year
+- [x] plot attrition lines per class
 
 ### Running the scrape yourself
 
@@ -57,7 +58,13 @@ Will generate the plots in the `plots` directory:
 
 ```bash
 $ tree plots/
-# TODO: fill in this
+plots
+├── all-time-class-count.png
+├── class-attrition-by-year.png
+├── class-proportion-by-year.png
+├── class-size-by-year.png
+├── relative-class-proportion-by-year.png
+└── relative-class-size-by-year.png
 ```
 
 <!-- Links -->
