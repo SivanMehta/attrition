@@ -5,6 +5,7 @@
 ![](./plots/class-attrition-by-year.png)
 ![](./plots/class-proportion-by-year.png)
 ![](./plots/all-time-class-count.png)
+![](./plots/attrition-by-team.png)
 
 ## Appendix
 

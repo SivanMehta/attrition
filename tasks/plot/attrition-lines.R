@@ -50,7 +50,7 @@ as.percentage <- function(num) {
 }
 
 teams.dat %>%
-  filter(school == 'Hopkins') %>%
+  filter(school == 'CMU') %>%
   ggplot() +
   aes(x = x, y = proportion) +
   geom_col() +
@@ -67,3 +67,22 @@ teams.dat %>%
   )
 
 ggsave('plots/all-time-class-count.png', width = 8, height = 4)
+
+teams.dat %>%
+  mutate(class = revalue(x, c("FR" = 1, "SO" = 2, "JR" = 3, "SR" = 4))) %>%
+  ggplot() +
+    aes(x = class, y = proportion, group = school, colour = school) +
+    geom_line() +
+    scale_x_discrete(labels=c(
+      "1" = "FR",
+      "2" = "SO",
+      "3" = "JR",
+      "4" = "SR"
+    )) +
+  labs(
+    title = "Attrition by School",
+    subtitle="Every school is scaled against themselves",
+    colour = "School"
+  )
+
+ggsave('plots/attrition-by-team.png', width = 6, height = 6)
