@@ -1,16 +1,19 @@
 # Attrition
 
-Exploring the data to be revealed in the rosters exposed on [SwimCloud].
+![](./plots/relative-class-size-by-year.png)
+![](./plots/class-attrition-by-year.png)
 
 ## Appendix
+
+Data is from the Carnegie Mellon rosters on [SwimCloud].
 
 ### Todo list
 
 - [x] scrape a single page
 - [x] scrape a list of pages
 - [x] gather data in a single dataframe
-- [x] plot class size per year
-- [ ] plot average attritions per class
+- [x] plot class size per year colored by class
+- [ ] plot attrition lines class
 - [ ] plot average attrition per year
 
 ### Running the scrape yourself
