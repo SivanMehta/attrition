@@ -1,5 +1,3 @@
-# Attrition
-
 ![](./plots/relative-class-size-by-year.png)
 ![](./plots/relative-class-proportion-by-year.png)
 ![](./plots/class-attrition-by-year.png)
